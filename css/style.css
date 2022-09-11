@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0;padding: 0;
+    outline: none;box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+:root{
+    --white:#fff;
+    --cinza1:#4a4a4a;
+    --cinza2:#383838;
+    --cinza3:#282828;
+}
+html{
+    font-size: 62.2%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+header{
+    position: fixed;
+    top: 0;right: 0;left: 0;
+    padding: 1rem ;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    z-index: 1000;
+    align-items: center;
+    background:linear-gradient(to right,var(--cinza3),var(--cinza2),var(--cinza1));
+}
+header i {
+    padding: .5rem;
+    font-size:2rem ;
+    cursor: pointer;
+}
+header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+header .navbar a:hover{
+    color: var(--cinza1);
+}
+/* inicio da home */
+.home-bg{
+    background: url(/image/hamburguer.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity:0.7 ;
+}
+.home-bg .home{
+    min-height: 38rem;
+    display: flex;
+    align-items: center;
+}
+.home-bg .home .content{
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 25rem;
+    color: var(--white);
+}
+.home-bg .home .content h2{
+    font-size: 3rem;
+}
+.home-bg .home .content p{
+    font-size: 2.5rem;
+}
+.home-bg .home .content span{
+    font-size: 2.5rem;
+}
