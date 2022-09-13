@@ -9,6 +9,7 @@
 }
 :root{
     --white:#fff;
+    --nav:#777784;
     --cinza1:#4a4a4a;
     --cinza2:#383838;
     --cinza3:#282828;
@@ -16,6 +17,7 @@
 }
 body{
     background-color: var(--body);
+    height: 200rem;
 }
 html{
     font-size: 62.2%;
@@ -57,7 +59,7 @@ header .navbar a:hover{
     
 }
 .home-bg .home{
-    min-height: 41.5rem;
+    min-height: 41rem;
     display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, .4);
@@ -65,39 +67,88 @@ header .navbar a:hover{
 .home-bg .home .content{
     text-align: center;
     width: 100rem;
-    margin-top: 5rem;
-    margin-left: 12rem;
+    margin-top: 7.5rem;
+    margin-left: 10rem;
     color: var(--white);
     
 }
 .home-bg .home .content img{
-    height: 100px;
-    width: 100px;
-    margin-bottom: 2rem;
+    height: 107px;
+    width: 107px;
+    margin-bottom: 3rem;
     border:4px solid var(--white) ;
 }
 .home-bg .home .content h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
     letter-spacing: 4px;
 }
 .home-bg .home .content p{
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    letter-spacing: 4px;
+    letter-spacing: 2.5px;
 }
 .home-bg .home .content i{
     margin-right: .5rem;
     font-size: 1.5rem;
 }
+.home-bg .home .content  .bola{
+    font-size: .9rem;
+}
 .home-bg .home .content button{
+    text-transform: none;
     font-size: 2rem;
     font-weight: 700;
-    color: #5bba21;
-    border-radius: .5rem;
+    color: #008b00;
+    border-radius: .7rem;
     margin-bottom: 1rem;
-    padding: .5rem;
+    padding: .5rem 1rem;
 }
 .home-bg .home .content span{
     letter-spacing: 1px;
     font-size: 1.8rem;
+}
+.home-bg .home .content span:hover{
+    cursor: pointer;
+    color: var(--cinza1);
+}
+/* inicio navegação dos produtos */
+
+.navegar{
+    position: sticky;
+    top: 5rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+}
+.navegar nav a{
+    text-transform: uppercase;
+    color: var(--nav);
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 1.2rem;
+}
+/* inicio dos produtos */
+.produtos{
+    border-top: 2px solid black;
+    border-radius: .5rem;
+    background-color: var(--white);
+    margin:4rem;
+}
+.produtos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1.5rem;
+}
+.produtos .box-container .box h3{
+    font-size: 2.5rem;
+}
+.produtos .box-container .box h4{
+    font-size: 1.7rem;
+}
+.produtos .box-container .box p{
+    font-size: 1.5rem;
+}
+.produtos .box-container .box span{
+    font-size: 1.7rem;
 }
