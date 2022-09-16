@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <!-- link fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- link swiper biblioteca js de carrousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     <title>Menu-Dino</title>
 </head>
@@ -21,12 +23,16 @@
         </div>
         
         <nav class="navbar">
-            <a href="">cardapios</a>
-            <a href="">pedidos</a>
-            <a href="">cupons</a>
+            <div class="after">
+                <a href=""><i class="fa-solid fa-utensils"></i>cardapios</a>
+                <a href=""><i class="fa-solid fa-list"></i></i>pedidos</a>
+                <a href=""><i class="fa-solid fa-tags"></i>cupons</a>
+            </div> 
         </nav>
-
-        <i class=" search fas fa-search"></i>
+        <div id="search">
+            <i class=" fas fa-search" ></i>
+        </div>
+      
 
     </header>
     <!-- aqui meche na home aonde fica a imagem -->
@@ -45,30 +51,64 @@
     </div>
 
     <section class="navegar">
-        <nav>
-            <a href="">novidades</a>
-            <a href="">promoção</a>
-            <a href="">açai</a>
-            <a href="">sorvete</a>
-            <a href="">picole comun</a>
-            <a href="">picole especial</a>
-            <a href="">brownie</a>
-            <a href="">bebidas</a>
-        </nav>
+       
+            <nav>
+                <a href="">novidades</a>
+                <a href="">promoção</a>
+                <a href="">açai</a>
+                <a href="">sorvete</a>
+                <a href="">picole comun</a>
+                <a href="">picole especial</a>
+                <a href="">brownie</a>
+                <a href="">bebidas</a>
+             </nav>
     </section>
     
     <section class="produtos">
-        <div class="box-container">
-            <div class="box">
-                <h3>novidades</h3>
 
-                <img src="" alt="">
-                <h4>petip gateau no copo</h4>
-                <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
-                <span>R$12,90</span>
+        <h3 class="heading">novidades</h3>
+        <i class="fa-solid fa-chevron-down"></i>
+
+        <div class="box-container">
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
             </div>
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div> 
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div>
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div>                          
+           
         </div>
     </section>
 
+    <script src="js/script.js"></script>
+    <!-- biblioteca carrousel cdn js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
 </body>
 </html>
