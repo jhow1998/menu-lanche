@@ -15,19 +15,24 @@
 </head>
 <body>
     <!-- aqui e as modificações do navbar -->
-    <header>
-        <i class="fas fa-bars"></i>
+    <header class="header">
+       
         <div class="left">
+            <i class="fas fa-bars" id="menu-btn"></i>
             <span>opçoes de entrega</span><br>
             <span>insira um endereço aqui...</span>
         </div>
         
         <nav class="navbar">
             <div class="after">
+                <span>menu</span>
                 <a href=""><i class="fa-solid fa-utensils"></i>cardapios</a>
                 <a href=""><i class="fa-solid fa-list"></i></i>pedidos</a>
                 <a href=""><i class="fa-solid fa-tags"></i>cupons</a>
             </div> 
+            <div class="bootom">
+                desenvolvido por <span>joseph robert</span> 
+            </div>
         </nav>
         <div id="search">
             <i class=" fas fa-search" ></i>
@@ -51,17 +56,22 @@
     </div>
 
     <section class="navegar">
-       
-            <nav>
-                <a href="">novidades</a>
-                <a href="">promoção</a>
-                <a href="">açai</a>
-                <a href="">sorvete</a>
-                <a href="">picole comun</a>
-                <a href="">picole especial</a>
-                <a href="">brownie</a>
-                <a href="">bebidas</a>
-             </nav>
+
+       <div class="swiper mySwiper">
+             <div class="swiper-wrapper " >
+                    <a href="" class="swiper-slide">novidades</a>
+                    <a href="" class="swiper-slide">promoção</a>
+                    <a href="" class="swiper-slide">açai</a>
+                    <a href="" class="swiper-slide">sorvete</a>
+                    <a href="" class="swiper-slide">picole comun</a>
+                    <a href="" class="swiper-slide">picole especial</a>
+                    <a href="" class="swiper-slide">brownie</a>
+                    <a href="" class="swiper-slide">bebidas</a>
+             </div>   
+                
+            <div class="swiper-button-next"></div>
+       </div>
+           
     </section>
     
     <section class="produtos">
@@ -106,9 +116,54 @@
         </div>
     </section>
 
-    <script src="js/script.js"></script>
-    <!-- biblioteca carrousel cdn js  -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <section class="produtos">
+
+        <h3 class="heading">promoção</h3>
+        <i class="fa-solid fa-chevron-down"></i>
+
+        <div class="box-container">
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div>
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div> 
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div>
+            <div class="box"> 
+                <div class="content">
+                    <h3>Petip Gateau no copo</h3>
+                    <p>o petit gateau do tamanho da sua fome....Nutella,sorvete,brownie,sorvete de baunilha e chantilly... uma deliciaa...</p>
+                    <span>r$ 17,00</span>
+                </div>
+                <img src="image/combo.jpg" alt="">
+            </div>                          
+           
+        </div>
+    </section>
+
+
+
+<!-- biblioteca carrousel cdn js  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+   
     
 </body>
 </html>

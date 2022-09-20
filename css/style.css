@@ -12,6 +12,7 @@
     --white:#fff;
     --nav:#777784;
     --cinza1:#4a4a4a;
+    --cinza5:#ededff;
     --cinza2:#383838;
     --cinza3:#282828;
     --color-navbar:#3a3f51;
@@ -35,7 +36,7 @@ body{
 header{
     position: fixed;
     top: 0;right: 0;left: 0;
-    padding: 1rem ;
+    padding: .8rem ;
     display: flex;
     justify-content: space-between;
     color: var(--white);
@@ -58,9 +59,21 @@ header .navbar a:hover{
 }
 .left{
     display: block;
-    white-space: nowrap;
-    
+    white-space: nowrap;  
 }    
+.after{
+    margin-top: 5rem;
+}
+.after a{
+    display: block;
+    padding: 2rem;
+}
+.after span{
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color:#777777;
+}
 /* inicio da home */
 .home-bg{
     background: url(/image/back.jpg) no-repeat;
@@ -132,25 +145,30 @@ header .navbar a:hover{
     padding: 1.5rem;
     background-color: var(--white);
 }
-.navegar nav a{
+.navegar a{
     text-transform: uppercase;
     color: var(--nav);
-    font-weight: 700;
-    font-size: 2rem;
-    margin: 0 1.2rem;
+    font-weight: 700; 
+    font-size: 1.5rem;
 }
 /* inicio dos produtos */
 .produtos{
     border-top: 2px solid black;
     border-radius: .5rem;
     background-color: var(--white);
-    margin:2rem;
+    margin-left:2rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 .produtos .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
     gap: 1.5rem;
     align-items: flex-start;
+}
+.produtos .box-container .content:hover{
+    background-color: var(--cinza5);
+    cursor: pointer;
 }
 .produtos .box-container .box{
     padding: 2rem;
@@ -224,6 +242,7 @@ header .navbar a:hover{
         top: 99%;left: 0;right: 0;
         background: var(--color-navbar);
         clip-path: polygon(0 0 , 100% 0,100% 0, 0 0);
+        
     }
     .header .navbar .after{
         margin: 12rem 0;

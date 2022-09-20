@@ -1,17 +1,25 @@
 var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 20,
     pagination: {
         el: ".swiper-pagination",
      },
     breakpoints: {
         540: {
-          slidesPerView: 1,
+          slidesPerView: 5,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 4,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 6,
         },
     },
   });
+
+  let menu = document.querySelector("#menu-btn");
+  let navbar = document.querySelector('.header .navbar');
+  
+  menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+  };
+  
