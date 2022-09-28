@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
 
 *{
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Roboto',sans-serif;
     margin: 0;padding: 0;
     outline: none;box-sizing: border-box;
     text-decoration: none;
@@ -17,6 +17,7 @@
     --cinza3:#282828;
     --color-navbar:#3a3f51;
     --body:#f5f7fa;
+    --border:.1rem solid rgba(255,255,255,.3);
 }
 .heading{
     font-size: 2rem;
@@ -36,7 +37,7 @@ body{
 header{
     position: fixed;
     top: 0;right: 0;left: 0;
-    padding: .8rem ;
+    padding: .5rem ;
     display: flex;
     justify-content: space-between;
     color: var(--white);
@@ -57,16 +58,101 @@ header .navbar a{
 header .navbar a:hover{
     color: var(--cinza1);
 }
+header .search-form{
+    position: absolute;
+    top: 95%; left: 65%; right: 0;
+    background: #fff;
+    width: 40rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    clip-path:polygon(0 0,100% 0 ,100% 0 ,0 0);
+}
+.search-form.active{
+    clip-path:polygon(0 0,100% 0 ,100% 100% ,0 100%);
+ }
+header .search-form input{
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: none;
+}
+.header .search-form label{
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+
+}
+/* inicio modal */
+.entrega-container{
+    position: fixed;
+    top: -120%; left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.entrega-container.active{
+    top: 0;
+}
+.entrega-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    border-radius: .5rem;
+    width: 50rem;
+}
+.entrega-container h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+.entrega-container form .box{
+    width: 100%;
+    padding: 1rem;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    text-transform: none;
+    color: #333;
+}
+.entrega-container form p{
+    padding: .5rem 0;
+    font-size: 1.4rem;
+    text-transform: none;
+
+}
+.entrega-container form p a{
+    color:rgb(45, 45, 248);
+}
+.entrega-container #close{
+    position: absolute;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
 .left{
-    display: block;
-    white-space: nowrap;  
-}    
-.after{
-    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+} 
+.left button{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 12rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.left span{   
+    font-size: 1.2rem;
 }
 .after a{
     display: block;
-    padding: 2rem;
+    padding: 1rem;
 }
 .after span{
     margin-left: 1.5rem;
@@ -74,9 +160,17 @@ header .navbar a:hover{
     font-weight: 700;
     color:#777777;
 }
+.bootom{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.bootom span{
+    color:#FFD700 ;
+}
 /* inicio da home */
 .home-bg{
-    background: url(/image/back.jpg) no-repeat;
+    background: url(/image/acai.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     
@@ -90,7 +184,7 @@ header .navbar a:hover{
 .home-bg .home .content{
     text-align: center;
     width: 100rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
     color: var(--white);
@@ -99,14 +193,14 @@ header .navbar a:hover{
 .home-bg .home .content img{
     height: 107px;
     width: 107px;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     border:4px solid var(--white) ;
 }
 .home-bg .home .content h2{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: .5rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 }
 .home-bg .home .content p{
     font-size: 1.8rem;
@@ -141,24 +235,28 @@ header .navbar a:hover{
 
 .navegar{
     position: sticky;
-    top: 5rem;
+    top: 4rem;
     padding: 1.5rem;
     background-color: var(--white);
+    font-size: 1.8rem;
 }
 .navegar a{
+    text-align: center;
     text-transform: uppercase;
     color: var(--nav);
     font-weight: 700; 
-    font-size: 1.5rem;
+   
 }
 /* inicio dos produtos */
 .produtos{
-    border-top: 2px solid black;
+    border-top: 3px solid black;
     border-radius: .5rem;
     background-color: var(--white);
     margin-left:2rem;
+    margin-right:2rem;
     margin-top: 3rem;
     margin-bottom: 6rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
 }
 .produtos .box-container{
     display: grid;
@@ -197,11 +295,40 @@ header .navbar a:hover{
     font-size: 1.6rem; 
 
 }
-
-
-
-
-
+.swiper-slide a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    background: var(--cinza3);
+    text-align: center;
+}
+.footer .share {
+    padding:1rem  0;
+}
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--white);
+    margin: .3rem;
+    border: var(--border);
+    border-radius: 50%;
+}
+.footer .share a:hover{
+    background-color: var(--cinza1);
+}
+.footer .credit {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credit span{
+    color:#FFD700;
+}
 
 
 
@@ -245,7 +372,7 @@ header .navbar a:hover{
         
     }
     .header .navbar .after{
-        margin: 12rem 0;
+        margin: 9rem 0;
     }
     .header .navbar.active{
         clip-path: polygon(0 0 , 100% 0 , 100%  100%, 0 100%);
@@ -255,14 +382,39 @@ header .navbar a:hover{
     }
     .header .navbar a {
         display: block;
-        margin: 3rem 1rem;
+        margin: 2rem 1rem;
         font-size: 1.8rem;
     }
     @media(max-width:991px){
         html{
             font-size: 55%;
         }
-    
+        header .search-form{
+            width: 37rem;
+            height: 4rem;
+        }
     }
-}
+    @media (max-width:769px){
+       
+    }
+    @media (max-width:450px){
+    
+        html{
+            font-size: 50%;
+        }
+        .navbar{
+            width: 15rem;
+        }
+        .header .navbar .after i{
+            margin: 0 .4rem;
+        }
+        .header .navbar a {
+            display: block;
+            margin: 1rem .5rem;
+            font-size: 1.5rem;
+        }
+
+           
+    }   
+}    
 
